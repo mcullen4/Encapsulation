@@ -15,6 +15,8 @@ public class NewJFrame extends javax.swing.JFrame {
         private String playerTwoName;
         private String playerThreeName;
         private String playerFourName;
+        private Game game;
+        
     /**
      * Creates new form NewJFrame
      */
@@ -135,12 +137,14 @@ public class NewJFrame extends javax.swing.JFrame {
         /**This would require some verification that a String was entered
          * etc, etc. etc.  Note to self - don't sweat the details right now
          */
-        
+        game = new Game();
         
         playerOneName=this.txtPlayerOneName.getText();
         playerTwoName=this.txtPlayerTwoName.getText();
         playerThreeName=this.txtPlayerThreeName.getText();
         playerFourName=this.txtPlayerFourName.getText();
+        
+        game.startGame(playerOneName, playerTwoName, playerThreeName, playerFourName);
         
         
     }//GEN-LAST:event_jButton1ActionPerformed

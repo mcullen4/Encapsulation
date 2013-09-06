@@ -12,16 +12,26 @@ public class GameCharacter {
    
    private String name;
    private int playerNumber;
-   private String pieceDescription;
    private int gameSpace;
+   private int diceRoll;
    
    public GameCharacter(String name,int playerNumber){
        this.name=name;
        this.playerNumber=playerNumber;
    }
    
-   public void takeTurn(){};
-   private void pickCard(){};
-   private void rollDice(){};
+   private void takeTurn(int player){
+   rollDice();
+   moveSpace();
+   GameBoard.checkGameBoard(gameSpace);
+   
+   
+   };
+   
+   private int rollDice(){
+   //random generation of dice roll
+   return diceRoll;    
+   
+   };
    private void moveSpace(){};
 }
