@@ -4,8 +4,6 @@
  */
 package lab2;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author Michele
@@ -144,7 +142,8 @@ public class NewJFrame extends javax.swing.JFrame {
         playerThreeName=this.txtPlayerThreeName.getText();
         playerFourName=this.txtPlayerFourName.getText();
         
-        game.startGame(playerOneName, playerTwoName, playerThreeName, playerFourName);
+        game.startGame(playerOneName, playerTwoName, playerThreeName,
+                playerFourName);
         
         
     }//GEN-LAST:event_jButton1ActionPerformed

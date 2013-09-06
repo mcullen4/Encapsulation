@@ -15,9 +15,9 @@ public class StartUp {
      */
     public static void main(String[] args) {
         
-        //Only method is to start the GUI
+        //Only method is to start the GUI interface
         
         
-        // TODO code application logic here
+        
     }
 }

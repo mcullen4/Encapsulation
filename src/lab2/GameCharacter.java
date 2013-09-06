@@ -20,18 +20,24 @@ public class GameCharacter {
        this.playerNumber=playerNumber;
    }
    
-   private void takeTurn(int player){
+   public int takeTurn(){
    rollDice();
    moveSpace();
-   GameBoard.checkGameBoard(gameSpace);
+   return gameSpace;
+   
    
    
    };
    
-   private int rollDice(){
+   private void rollDice(){
    //random generation of dice roll
-   return diceRoll;    
+     
    
    };
-   private void moveSpace(){};
+   private void moveSpace(){
+   //calculate new gameSpace 
+     
+     
+   
+   };
 }
