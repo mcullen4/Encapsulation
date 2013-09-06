@@ -15,7 +15,10 @@ public class GameCharacter {
    private String pieceDescription;
    private int gameSpace;
    
-   
+   public GameCharacter(String name,int playerNumber){
+       this.name=name;
+       this.playerNumber=playerNumber;
+   }
    
    public void takeTurn(){};
    private void pickCard(){};

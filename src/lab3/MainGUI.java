@@ -20,17 +20,20 @@ import javax.swing.*;
  * @version     1.00
 */
 public class MainGUI extends javax.swing.JFrame implements ActionListener {
-    private final int MAX_RECS = 10;
-    private final int NOT_FOUND = -1;
+    private static final int MAX_RECS = 10;
+    private static final int NOT_FOUND = -1;
 
     String partNo;
-    int foundIndex = NOT_FOUND;
+    private int foundIndex = NOT_FOUND;
     private String partDesc;
-    double partPrice;
+    private double partPrice;
+    private PartManager partManager;
 
-    String[] partNums = new String[10];
-    String[] partDescs = new String[10];
-    double[] partPrices = new double[10];
+    //Moved to the PartManager class
+    //String[] partNums = new String[10];
+    //String[] partDescs = new String[10];
+    //double[] partPrices = new double[10];
+    
     int emptyRow;
 
     /** Creates new form MainGUI */
@@ -385,7 +388,7 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
                     JOptionPane.WARNING_MESSAGE);
         }
     }
-
+    // GUI responsibility - leave in 
     private void clearEntryFields() {
         txtNewProdNo.setText("");
         txtNewProdDesc.setText("");

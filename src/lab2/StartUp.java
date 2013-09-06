@@ -14,6 +14,10 @@ public class StartUp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        //Only method is to start the GUI
+        
+        
         // TODO code application logic here
     }
 }

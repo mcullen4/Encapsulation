@@ -1,6 +1,5 @@
 package lab1;
 
-import java.util.Date;
 import java.util.Scanner;
 
 
@@ -16,7 +15,6 @@ public class Employee {
     private String firstName;
     private String lastName;
     private String ssn;
-    private Date birthDate;
     private boolean metWithHr;
     private boolean metDeptStaff;
     private boolean reviewedDeptPolicies;
@@ -27,11 +25,10 @@ public class Employee {
     Scanner keyboard = new Scanner(System.in);
     
 
-    public Employee(String firstName, String lastName, String ssn, Date birthDate) {
+    public Employee(String firstName, String lastName, String ssn) {
         this.firstName=firstName;
         this.lastName=lastName;
         this.ssn=ssn;
-        this.birthDate=birthDate;
         beginOrientation();
         }
 
@@ -58,15 +55,7 @@ public class Employee {
     public void setSsn(String ssn) {
         this.ssn = ssn;
     }
-
-    public Date getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
-    }
-
+    
     public boolean isMetWithHr() {
         return metWithHr;
     }

@@ -10,8 +10,7 @@ package lab1;
  */
 public class Startup {
     public static void main(String[] args) {
-        Employee e1 = new Employee("Fred","Smith","123-4567",'11/01/1960');
-        
+        Employee e1 = new Employee("Fred","Smith","123-4567");
         System.out.println("The employee's status is: " + e1.getOrientationStatus());
     }
     
