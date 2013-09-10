@@ -1,4 +1,4 @@
-package lab3;
+package UpdatedLab3.lab3;
 
 /**
  * The responsibility of this class is to just start the program, which
