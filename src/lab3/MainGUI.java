@@ -269,7 +269,9 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
             partPrice = Double.parseDouble(this.txtNewProdPrice.getText());
         } catch(Exception e) {
             JOptionPane.showMessageDialog(this,
-                    "Sorry, the price entry must be a whole or floating point number only.\n",
+                    "Sorry, the price entry must be a whole or floating point"
+                    + " number only.\n",
+  
                     "Number Format Error", JOptionPane.WARNING_MESSAGE);
             return;
         }
@@ -288,11 +290,11 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
             this.txtNewProdNo.requestFocus();
 
         } else {
-           partManager.setPartNum(partNum[emptyRow]);
+           partManager.setPartNum(emptyRow,partNum);
+           partManager.setPartDesc(emptyRow, partDesc);
+           partManager.setPartPrice(emptyRow, partPrice);
             
-            //partNum[emptyRow] = partNo;
-            //partDesc[emptyRow] = partDesc;
-            //partPrice[emptyRow] = partPrice;
+            
             this.emptyRow += 1;
         }
 
@@ -302,11 +304,8 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         String searchNum = txtSearchPartNo.getText();
-        if (searchNum != null && searchNum.length() > 0) {
-            for (int i = 0; i < this.partNums.length; i++) {
-                if (searchNum.equalsIgnoreCase(partNums[i])) {
-                    foundIndex = i;
-                    break;
+        foundIndex = partManager.searchPartNumber(searchNum);
+        break;
                 }
             }
            if (foundIndex == NOT_FOUND) {
