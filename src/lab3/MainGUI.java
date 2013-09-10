@@ -25,10 +25,9 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
 
     String partNo;
     private int foundIndex = NOT_FOUND;
-    private String partNum;
     private String partDesc;
     private double partPrice;
-    private PartManager partManager= new PartManager();
+    private PartManager partManager;
 
     //Moved to the PartManager class
     //String[] partNums = new String[10];
@@ -263,7 +262,7 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
     private void btnEnterRecordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnterRecordActionPerformed
         foundIndex = NOT_FOUND;
 
-        partNum = this.txtNewProdNo.getText();
+        partNo = this.txtNewProdNo.getText();
         partDesc = this.txtNewProdDesc.getText();
         try {
             partPrice = Double.parseDouble(this.txtNewProdPrice.getText());
