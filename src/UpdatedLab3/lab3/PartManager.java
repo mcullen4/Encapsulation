@@ -4,6 +4,8 @@
  */
 package UpdatedLab3.lab3;
 
+import java.text.NumberFormat;
+
 /**
  *
  * @author Michele
@@ -16,8 +18,16 @@ public class PartManager {
     private int foundIndex=0;
     private int emptyRow=0;
     
-    public String updateList(int emptyRow,)
-    
+    private void displayList() {
+        NumberFormat nf = NumberFormat.getCurrencyInstance();
+        MainGUI.listProducts.setText(""); // clear list
+        MainGUI.listProducts.append("Part\tDesc\t\tPrice\n====\t====\t\t=====\n");
+        for (int i = 0 ; i < emptyRow; i++) {
+            String rLine = partNum[i] + "\t"
+                    + partDesc[i] + "\t\t" + nf.format(partPrice[i]) + "\n";
+            MainGUI.listProducts.append(rLine);
+        }
+    }
     
     
     
