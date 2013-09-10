@@ -9,9 +9,35 @@ package lab3;
  * @author Michele
  */
 public class PartManager {
-    private String[] partNums = new String[10];
-    private String[] partDescs = new String[10];
-    private double[] partPrices = new double[10];
+    private String[] partNum = new String[10];
+    private String[] partDesc = new String[10];
+    private double[] partPrice = new double[10];
+
+    public String[] getPartNum() {
+        return partNum;
+    }
+
+    public void setPartNum(String[] partNum) {
+        this.partNum = partNum;
+    }
+
+    public String[] getPartDesc() {
+        return partDesc;
+    }
+
+    public void setPartDesc(String[] partDesc) {
+        this.partDesc = partDesc;
+    }
+
+    public double[] getPartPrice() {
+        return partPrice;
+    }
+
+    public void setPartPrice(double[] partPrice) {
+        this.partPrice = partPrice;
+    }
+
+    
     
      
 }
